@@ -1,0 +1,52 @@
+﻿@model ProductDto
+<h2>Do You Want to Delete ?</h2>
+<hr />
+
+
+    <form asp-action="DeleteProduct" asp-controller="Product" method="post">
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label><b>Product Name</b></label>
+            </div>
+            <div class="col-sm-3">
+                @Model.ProductName
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label><b>Description</b></label>
+            </div>
+            <div class="col-sm-3">
+                @Model.Description
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label><b>Price</b></label>
+            </div>
+            <div class="col-sm-3">
+                @Model.Price
+            </div>
+        </div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <label><b>Category</b></label>
+        </div>
+        <div class="col-sm-3">
+            @Model.Category
+        </div>
+    </div>
+
+        <div class="row">
+            <div class=" col-sm-12">
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a class="btn btn-primary" asp-controller="Product" asp-action="Index">Cancel</a>
+            </div>
+
+        </div>
+    </form>
